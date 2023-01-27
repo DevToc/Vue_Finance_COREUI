@@ -7,16 +7,14 @@
   <div class="splash">
     <SplashIcon />
     <h1 class="splash-title">DOFAAT</h1>
-
   </div>
 </template>
 
 <style>
 
 .splash {
-  background-color: #100D40;
-  min-height: 100vh;
   height: 100vh;
+  background-color: #100D40;
   display: flex;
   justify-content: center;
   align-items: center;

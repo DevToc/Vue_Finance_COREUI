@@ -1,8 +1,27 @@
 @import url(' https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+:root {
+  --cui-primary: #100D40;
+  --bs-primary:#100D40;
+  --cui-blue:var(--bs-primary)
+  --bs-blue:var(--bs-primary)
+
+}
+.btn-primary {
+  background-color:var(--bs-primary) ;
+}
+.btn-outline-primary{
+  border: 1px solid var(--bs-primary);
+  color: var(--bs-primary);
+}
 * {
   font-family: "Poppins";
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+}
+
+#app {
+  min-height: 100vh;
+  height: 100vh;
 }

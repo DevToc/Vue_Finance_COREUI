@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="splashicon">
     <svg
       width="121"
       height="121"
