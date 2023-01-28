@@ -9,6 +9,13 @@
 }
 .btn-primary {
   background-color:var(--bs-primary) ;
+  max-width: 390px;
+  width: 100%;
+  padding: 16px 20px ;
+  font-size: 16px ;
+  line-height: 24px ;
+  border-radius: 10px ;
+  font-weight: 600 ;
 }
 .btn-outline-primary{
   border: 1px solid var(--bs-primary);

@@ -177,15 +177,15 @@ input[type="checkbox"] {
   border-radius: 4px;
 }
 
-.btn-signup{
-  max-width: 390px;
-  width: 100%;
-  padding: 16px 20px !important;
-  font-size: 16px !important;
-  line-height: 24px !important;
-  border-radius: 10px !important;
-  font-weight: 600 !important;
-}
+// .btn-signup{
+//   // max-width: 390px;
+//   // width: 100%;
+//   // padding: 16px 20px !important;
+//   // font-size: 16px !important;
+//   // line-height: 24px !important;
+//   // border-radius: 10px !important;
+//   // font-weight: 600 !important;
+// }
 .signin {
   text-align: center;
 }
