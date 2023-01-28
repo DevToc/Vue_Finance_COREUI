@@ -14,7 +14,9 @@
     "bootstrap-vue": "^2.23.1",
     "core-js": "^3.8.3",
     "vue": "^3.2.13",
-    "vue-router": "^4.0.3"
+    "vue-phone-number-input": "^1.12.13",
+    "vue-router": "^4.0.3",
+    "vue3-tel-input": "^1.0.4"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -27,6 +29,9 @@
     "eslint-plugin-vue": "^8.7.1",
     "node-sass": "^8.0.0",
     "sass-loader": "^13.2.0"
+  },
+  "alias": {
+    "vue": "./node_modules/vue/dist/vue.runtime.esm-browser.prod.js"
   },
   "eslintConfig": {
     "root": true,

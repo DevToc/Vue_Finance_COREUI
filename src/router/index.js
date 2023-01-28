@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import SplashView from '../views/SplashView.vue'
 import OnboardingView from '../views/OnboardingView.vue'
+import SignupView from '../views/SignupView.vue'
+
 const routes = [
   {
     path: '/',
@@ -14,6 +16,14 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: OnboardingView
+  },
+  {
+    path: '/signup',
+    name: 'signup',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: SignupView
   }
 ]
 
