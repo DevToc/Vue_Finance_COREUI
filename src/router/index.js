@@ -3,6 +3,7 @@ import SplashView from '../views/SplashView.vue'
 import OnboardingView from '../views/OnboardingView.vue'
 import SignupView from '../views/SignupView.vue'
 import VerifyOTPView from '../views/VerifyOTPView.vue'
+import AccountCreatedView from '../views/AccountCreatedView.vue'
 
 const routes = [
   {
@@ -33,6 +34,14 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: VerifyOTPView
+  },
+  {
+    path: '/created',
+    name: 'account_created',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: AccountCreatedView
   }
 ]
 
