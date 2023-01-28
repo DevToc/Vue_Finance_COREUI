@@ -6,13 +6,13 @@ import { CButton } from "@coreui/vue";
 </script>
 
 <template>
-  <div class="profile">
-    <div class="profile-title">
+  <div class="bank">
+    <div class="bank-title">
       <div class="back-icon">
           &lt;
       </div>
       <div class="title-content">
-        <h2>Change Personal Profile</h2> 
+        <h2>Change Personal bank</h2> 
       </div>
     </div>
     <div class="form-wrapper">
@@ -30,16 +30,10 @@ import { CButton } from "@coreui/vue";
           <label for="">National ID</label>
           <input type="text" />
         </div>
-        <div class="form-item">
-          <label for="">Birthday</label>
-          <div class="birthday-wrapper">
-            <input type="date" name="" id="">
-
-           
-          </div>
-        </div>
+    
+     
         <div class="form-item btn-wrapper">
-          <CButton  color="primary" class="btn-profile">Update</CButton>
+          <CButton  color="primary" class="btn-bank">Update</CButton>
         </div>
       </form>
     </div>
@@ -47,13 +41,13 @@ import { CButton } from "@coreui/vue";
 </template>
 
 <style lang="scss" scoped>
-.profile {
+.bank {
   height: 100vh;
   display: flex;
   flex-direction: column;
   padding: 27px 24px;
 }
-.profile-title {
+.bank-title {
   display: flex;
   column-gap: 50px;
 }
@@ -61,7 +55,7 @@ import { CButton } from "@coreui/vue";
   font-size: 20px;
   line-height: 20px;
 }
-.profile-title h2 {
+.bank-title h2 {
  font-style: normal;
 font-weight: 500;
 font-size: 16px;
@@ -114,6 +108,6 @@ color: #262626;
   position: relative;
 }
 .btn-wrapper {
-  margin-top: 360px;
+  margin-top: 275px;
 }
 </style>
