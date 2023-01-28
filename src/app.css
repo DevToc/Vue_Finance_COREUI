@@ -9,7 +9,7 @@
 }
 .btn-primary {
   background-color:var(--bs-primary) ;
-  max-width: 390px;
+  /* max-width: 390px; */
   width: 100%;
   padding: 16px 20px ;
   font-size: 16px ;
