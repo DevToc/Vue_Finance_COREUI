@@ -6,9 +6,9 @@ import MailIcon from "@/components/Icons/MailIcon.vue"
 </script>
 
 <template>
-  <div class="account-renter">
-    <div class="account-renter-wrapper">
-      <h1 class="account-renter-title">Account</h1>
+  <div class="account-owner">
+    <div class="account-owner-wrapper">
+      <h1 class="account-owner-title">Account</h1>
     </div>
 
    
@@ -39,7 +39,19 @@ import MailIcon from "@/components/Icons/MailIcon.vue"
           <span>&gt;</span>
          </div>
       </div>
-     
+      <div class="normal-card">
+         <div class="icon-title">
+          <div class="card-icon">
+              <MailIcon/>
+            </div>
+            <div class="card-title">
+              Change Bank Details
+            </div>
+         </div>
+         <div class="left-arrow">
+          <span>&gt;</span>
+         </div>
+      </div>
     </div>
     <div class="logout-btn-wrapper">
       <CButton color="primary" class="btn-signup">Logout</CButton>
@@ -48,14 +60,14 @@ import MailIcon from "@/components/Icons/MailIcon.vue"
 </template>
 
 <style scoped>
-.account-renter {
+.account-owner {
   height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
   padding: 43px 24px 20px 24px;
 }
-.account-renter-title {
+.account-owner-title {
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
