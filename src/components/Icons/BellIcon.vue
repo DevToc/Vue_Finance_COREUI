@@ -1,0 +1,10 @@
+<template>
+  <div class="handicon">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.53 15.3801H2.80002V7.4701C2.80002 3.6801 5.87002 0.600098 9.67002 0.600098C13.46 0.600098 16.54 3.6701 16.54 7.4701V15.3801H16.53Z" stroke="white" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M0.600006 15.3801H18.73" stroke="white" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11.68 17.3701C11.68 18.4801 10.78 19.3901 9.66001 19.3901C8.54001 19.3901 7.64001 18.4901 7.64001 17.3701" stroke="white" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+  </div>
+</template>
