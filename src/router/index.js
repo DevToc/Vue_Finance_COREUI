@@ -5,6 +5,7 @@ import SignupView from '../views/SignupView.vue'
 import VerifyOTPView from '../views/VerifyOTPView.vue'
 import AccountCreatedView from '../views/AccountCreatedView.vue'
 import SigninView from '../views/SigninView.vue'
+import AccountRenterView from '../views/AccountRenterView.vue'
 
 const routes = [
   {
@@ -51,6 +52,14 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: SigninView
+  },
+  {
+    path: '/accountrenter',
+    name: 'accountrenter',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: AccountRenterView
   },
 ]
 

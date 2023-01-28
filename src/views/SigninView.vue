@@ -73,6 +73,7 @@ color: #FFFFFF;
 }
 
 .signin-content {
+  background-color: #C4C4C4;
   padding: 32px 24px;
   width: 100%;
 }
@@ -135,16 +136,20 @@ color: #FFFFFF;
   background-color: white;
   border-radius: none;
 }
+.vti__dropdown-item {
+  width: 300px !important;
+  // overflow: hidden;
+}
 .signup-wrapper {
   margin-top: 150px;
   text-align: center;
 }
-.signin span {
+.signup-wrapper span {
   font-size: 12px;
   line-height: 18px;
   color:#100D40
 }
-.signin a {
+.signup-wrapper a {
   font-weight: 600;
   color: #100D40;
 }
