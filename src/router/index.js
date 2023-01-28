@@ -10,7 +10,7 @@ import AccountOwnerView from '../views/AccountOwnerView.vue'
 import ProfileView from '../views/ProfileView.vue'
 import UpdateBankView from '../views/UpdateBankView.vue'
 import HomeView from '../views/HomeView.vue'
-
+import ContractListView from '../views/ContractListView.vue'
 
 const routes = [
   {
@@ -100,6 +100,14 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: HomeView
+  },
+  {
+    path: '/contracts/list',
+    name: 'ContractsList',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: ContractListView
   },
 ]
 
