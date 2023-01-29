@@ -11,6 +11,7 @@ import ProfileView from '../views/ProfileView.vue'
 import UpdateBankView from '../views/UpdateBankView.vue'
 import HomeView from '../views/HomeView.vue'
 import ContractListView from '../views/ContractListView.vue'
+import SendSuccessView from '../views/SendSuccessView.vue'
 
 const routes = [
   {
@@ -21,93 +22,65 @@ const routes = [
   {
     path: '/onboarding',
     name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: OnboardingView
+  component: OnboardingView
   },
   {
     path: '/signup',
     name: 'signup',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: SignupView
+  component: SignupView
   },
   {
     path: '/verifyotp',
     name: 'verifyotp',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: VerifyOTPView
+  component: VerifyOTPView
   },
   {
     path: '/created',
     name: 'account_created',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: AccountCreatedView
+  component: AccountCreatedView
   },
   {
     path: '/signin',
     name: 'signin',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: SigninView
+  component: SigninView
   },
   {
     path: '/account/renter',
     name: 'accountrenter',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: AccountRenterView
+  component: AccountRenterView
   },
   
   {
     path: '/account/owner',
     name: 'accountowner',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: AccountOwnerView
+  component: AccountOwnerView
   },
   
   {
     path: '/account/profile',
     name: 'profile',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: ProfileView
+  component: ProfileView
   },
   
   {
     path: '/account/bank',
     name: 'Bank',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: UpdateBankView
+  component: UpdateBankView
   },
   {
     path: '/home',
     name: 'Home',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: HomeView
+  component: HomeView
   },
   {
     path: '/contracts/list',
     name: 'ContractsList',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: ContractListView
+  component: ContractListView
+  },
+  {
+    path: '/sendsuccess',
+    name: 'sendsuccess',
+  component: SendSuccessView
   },
 ]
 
