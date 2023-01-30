@@ -13,6 +13,7 @@ import HomeView from '../views/HomeView.vue'
 import ContractListView from '../views/ContractListView.vue'
 import SendSuccessView from '../views/SendSuccessView.vue'
 import HomeRenterView from '../views/HomeRenterView.vue'
+import ApplyLoanView from '../views/ApplyLoanView.vue'
 
 const routes = [
   {
@@ -87,6 +88,11 @@ const routes = [
     path: '/home/renter',
     name: '',
   component: HomeRenterView
+  },
+  {
+    path: '/loan',
+    name: 'Apply Loan',
+  component: ApplyLoanView
   },
 ]
 
