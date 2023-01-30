@@ -1,6 +1,13 @@
 <script setup>
-  import SplashIcon from '@/components/Icons/SplashIcon.vue';
+  import { useRouter } from 'vue-router';
   
+  import SplashIcon from '@/components/Icons/SplashIcon.vue';
+  const router = useRouter();
+  setTimeout(() => {
+      router.push({name:'onboarding'})
+  }, 3000);
+
+
 </script>
 
 <template>

@@ -1,11 +1,11 @@
 <script setup>
-import OptionIcon from "@/components/Icons/OptionIcon.vue";
 import { CBadge } from "@coreui/vue";
+
+import OptionIcon from "@/components/Icons/OptionIcon.vue";
 import BellIcon from "@/components/Icons/BellIcon.vue";
 import BalanceIcon from "@/components/Icons/BalanceIcon.vue";
 import CompletedIcon from "@/components/Icons/CompletedIcon.vue";
 import ProcessingIcon from "@/components/Icons/ProcessingIcon.vue";
-
 </script>
 
 <template>
@@ -15,12 +15,8 @@ import ProcessingIcon from "@/components/Icons/ProcessingIcon.vue";
         <OptionIcon />
       </div>
       <div class="name-wrapper">
-        <p class="welcome">
-          Welcome back
-        </p>
-        <p class="name">
-            Ahmed
-        </p>
+        <p class="welcome">Welcome back</p>
+        <p class="name">Ahmed</p>
       </div>
       <div class="notification">
         <div color="primary" class="position-relative">
@@ -39,104 +35,78 @@ import ProcessingIcon from "@/components/Icons/ProcessingIcon.vue";
     <div class="balance-card">
       <div class="balance-info">
         <div class="balance-title">
-          <BalanceIcon/>
+          <BalanceIcon />
           <p>My Balance</p>
         </div>
         <div class="balance-amount">
           <p>15032 SAR</p>
         </div>
       </div>
-      <div class="withdraw-wrapper">
-        Withdraw
-      </div>
+      <div class="withdraw-wrapper">Withdraw</div>
     </div>
     <div class="transactions-wrapper">
       <h3>Latest Transactions</h3>
       <div class="transactions">
-          <div class="transaction-card">
-           <div class="transaction-status position-relative">
-            <CompletedIcon/>
-            <div class="status-description">
-              completed
+        <div class="transaction-card">
+          <div class="transaction-status position-relative">
+            <CompletedIcon />
+            <div class="status-description">completed</div>
+          </div>
+          <div class="transaction-info">
+            <div class="transaction-detail">
+              <p class="name">Ahmed Mohammed</p>
+              <p class="date">Tuesday, 23 Nov 2022</p>
             </div>
-           </div>
-            <div class="transaction-info">
-              <div class="transaction-detail">
-                <p class="name">
-                  Ahmed Mohammed 
-                </p>
-                <p class="date">
-                  Tuesday, 23 Nov 2022
-                </p>
-              </div>
-              <div class="transaction-amount">
-                <h3>+487 SAR</h3>
-              </div>
+            <div class="transaction-amount">
+              <h3>+487 SAR</h3>
             </div>
           </div>
-          <div class="transaction-card">
-           <div class="transaction-status position-relative">
-            <CompletedIcon/>
-            <div class="status-description">
-              completed
+        </div>
+        <div class="transaction-card">
+          <div class="transaction-status position-relative">
+            <CompletedIcon />
+            <div class="status-description">completed</div>
+          </div>
+          <div class="transaction-info">
+            <div class="transaction-detail">
+              <p class="name">Ahmed Mohammed</p>
+              <p class="date">Tuesday, 23 Nov 2022</p>
             </div>
-           </div>
-            <div class="transaction-info">
-              <div class="transaction-detail">
-                <p class="name">
-                  Ahmed Mohammed 
-                </p>
-                <p class="date">
-                  Tuesday, 23 Nov 2022
-                </p>
-              </div>
-              <div class="transaction-amount">
-                <h3>+487 SAR</h3>
-              </div>
+            <div class="transaction-amount">
+              <h3>+487 SAR</h3>
             </div>
           </div>
-          <div class="transaction-card">
-           <div class="transaction-status position-relative">
-            <ProcessingIcon/>
-            <div class="status-description">
-              processing
+        </div>
+        <div class="transaction-card">
+          <div class="transaction-status position-relative">
+            <ProcessingIcon />
+            <div class="status-description">processing</div>
+          </div>
+          <div class="transaction-info">
+            <div class="transaction-detail">
+              <p class="name">Ahmed Mohammed</p>
+              <p class="date">Tuesday, 23 Nov 2022</p>
             </div>
-           </div>
-            <div class="transaction-info">
-              <div class="transaction-detail">
-                <p class="name">
-                  Ahmed Mohammed 
-                </p>
-                <p class="date">
-                  Tuesday, 23 Nov 2022
-                </p>
-              </div>
-              <div class="transaction-amount processing">
-                <h3>-487 SAR</h3>
-              </div>
+            <div class="transaction-amount processing">
+              <h3>-487 SAR</h3>
             </div>
           </div>
-          <div class="transaction-card">
-           <div class="transaction-status position-relative">
-            <ProcessingIcon/>
-            <div class="status-description">
-              processing
+        </div>
+        <div class="transaction-card">
+          <div class="transaction-status position-relative">
+            <ProcessingIcon />
+            <div class="status-description">processing</div>
+          </div>
+          <div class="transaction-info">
+            <div class="transaction-detail">
+              <p class="name">Ahmed Mohammed</p>
+              <p class="date">Tuesday, 23 Nov 2022</p>
             </div>
-           </div>
-            <div class="transaction-info">
-              <div class="transaction-detail">
-                <p class="name">
-                  Ahmed Mohammed 
-                </p>
-                <p class="date">
-                  Tuesday, 23 Nov 2022
-                </p>
-              </div>
-              <div class="transaction-amount processing">
-                <h3>-487 SAR</h3>
-              </div>
+            <div class="transaction-amount processing">
+              <h3>-487 SAR</h3>
             </div>
           </div>
+        </div>
       </div>
     </div>
   </div>
@@ -160,66 +130,63 @@ import ProcessingIcon from "@/components/Icons/ProcessingIcon.vue";
   align-items: center;
 }
 .name-wrapper .welcome {
-
-font-weight: 400;
-font-size: 14px;
-line-height: 20px;
-color: rgba(255, 255, 255, 0.72);
-
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.72);
 }
 .name-wrapper .name {
   font-weight: 500;
-font-size: 18px;
-line-height: 26px;
-color: #FFFFFF;
+  font-size: 18px;
+  line-height: 26px;
+  color: #ffffff;
 }
 .bell {
-  top:7px !important;
-  right:10px !important;
-  left:18px !important
+  top: 7px !important;
+  right: 10px !important;
+  left: 18px !important;
 }
 
 .balance-card {
   margin-top: 38px;
   width: 100%;
-  background: #FFFFFF;
-box-shadow: 10px 24px 54px rgba(15, 13, 35, 0.04);
-border-radius: 10px;
-padding: 18px 12px;
+  background: #ffffff;
+  box-shadow: 10px 24px 54px rgba(15, 13, 35, 0.04);
+  border-radius: 10px;
+  padding: 18px 12px;
 }
-.balance-info{
+.balance-info {
   display: flex;
   justify-content: space-between;
-  border-bottom:  1px solid #F2F2F2;
+  border-bottom: 1px solid #f2f2f2;
   padding-bottom: 10px;
 }
-.balance-title{
+.balance-title {
   column-gap: 5px;
   display: flex;
   align-items: center;
-
 }
-.balance-title p{
+.balance-title p {
   margin: 0;
   font-weight: 400;
-font-size: 14px;
-line-height: 20px;
-color: #100D40;
+  font-size: 14px;
+  line-height: 20px;
+  color: #100d40;
 }
 .balance-amount p {
   margin: 0;
   font-weight: 600;
-font-size: 16px;
-line-height: 24px;
-color: #100D40;
+  font-size: 16px;
+  line-height: 24px;
+  color: #100d40;
 }
 .withdraw-wrapper {
   text-align: center;
   padding-top: 11px;
   font-weight: 600;
-font-size: 14px;
-line-height: 20px;
-color: #EF3F3F;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ef3f3f;
 }
 .transactions-wrapper {
   margin-top: 18px;
@@ -229,11 +196,9 @@ color: #EF3F3F;
 }
 .transactions-wrapper h3 {
   font-weight: 400;
-font-size: 14px;
-line-height: 21px;
-
-
-color: #999999;
+  font-size: 14px;
+  line-height: 21px;
+  color: #999999;
 }
 
 .transactions {
@@ -243,24 +208,22 @@ color: #999999;
   width: 100%;
 }
 .transaction-card {
-  background: #FFFFFF;
- width: 100%;
-box-shadow: 10px 24px 54px rgba(15, 13, 35, 0.04);
-border-radius: 10px;
-padding-right: 15px;
-display: flex;
+  background: #ffffff;
+  width: 100%;
+  box-shadow: 10px 24px 54px rgba(15, 13, 35, 0.04);
+  border-radius: 10px;
+  padding-right: 15px;
+  display: flex;
 }
 .status-description {
   position: absolute;
   top: 16px;
-    left: -2px;
+  left: -2px;
   font-weight: 500;
-font-size: 8px;
-line-height: 12px;
-
-color: #FFFFFF;
-
-transform: rotate(-45deg);
+  font-size: 8px;
+  line-height: 12px;
+  color: #ffffff;
+  transform: rotate(-45deg);
 }
 .transaction-info {
   display: flex;
@@ -270,34 +233,30 @@ transform: rotate(-45deg);
 }
 .transaction-detail .name {
   font-weight: 500;
-font-size: 14px;
-line-height: 20px;
-margin: 0;
-
-
-color: #100D40;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  color: #100d40;
 }
 .transaction-detail .date {
   margin: 0;
   font-weight: 400;
-font-size: 12px;
-line-height: 18px;
-
-color: #100D40;
+  font-size: 12px;
+  line-height: 18px;
+  color: #100d40;
 }
 
-.transaction-amount h3{
+.transaction-amount h3 {
   margin: 0;
   font-weight: 600;
-font-size: 14px;
-line-height: 20px;
-
-color: #57C600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #57c600;
 }
 .processing h3 {
   font-weight: 600;
-font-size: 14px;
-line-height: 20px;
-color: #EF3F3F;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ef3f3f;
 }
 </style>

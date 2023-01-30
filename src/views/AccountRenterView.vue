@@ -1,8 +1,7 @@
 <script setup>
-import { CButton } from "@coreui/vue";
 import UserIcon from "@/components/Icons/UserIcon.vue";
-import MailIcon from "@/components/Icons/MailIcon.vue"
-
+import MailIcon from "@/components/Icons/MailIcon.vue";
+import WButton from "@/components/Button/WButton.vue";
 </script>
 
 <template>
@@ -10,39 +9,32 @@ import MailIcon from "@/components/Icons/MailIcon.vue"
     <div class="account-renter-wrapper">
       <h1 class="account-renter-title">Account</h1>
     </div>
-
-   
     <div class="card-wrapper">
       <div class="normal-card">
-         <div class="icon-title">
+        <div class="icon-title">
           <div class="card-icon">
-              <UserIcon/>
-            </div>
-            <div class="card-title">
-              Change Personal Profile
-            </div>
-         </div>
-         <div class="left-arrow">
+            <UserIcon />
+          </div>
+          <div class="card-title">Change Personal Profile</div>
+        </div>
+        <div class="left-arrow">
           <span>&gt;</span>
-         </div>
+        </div>
       </div>
       <div class="normal-card">
-         <div class="icon-title">
+        <div class="icon-title">
           <div class="card-icon">
-              <MailIcon/>
-            </div>
-            <div class="card-title">
-              Change Language
-            </div>
-         </div>
-         <div class="left-arrow">
+            <MailIcon />
+          </div>
+          <div class="card-title">Change Language</div>
+        </div>
+        <div class="left-arrow">
           <span>&gt;</span>
-         </div>
+        </div>
       </div>
-     
     </div>
     <div class="logout-btn-wrapper">
-      <CButton color="primary" class="btn-signup">Logout</CButton>
+      <WButton text="Logout" color="primary" />
     </div>
   </div>
 </template>
@@ -65,20 +57,19 @@ import MailIcon from "@/components/Icons/MailIcon.vue"
 .card-wrapper {
   margin: 47px;
   display: flex;
-  width:100%;
+  width: 100%;
   flex-direction: column;
   row-gap: 16px;
-
 }
 .normal-card {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   width: 100%;
   padding: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 10px 24px 54px rgba(15, 13, 35, 0.04);
-border-radius: 10px;
+  border-radius: 10px;
 }
 .icon-title {
   display: flex;
@@ -86,25 +77,25 @@ border-radius: 10px;
   align-items: center;
 }
 .card-icon {
-  background-color: #F1EDFF;
+  background-color: #f1edff;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 .card-title {
   font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 20px;
-color: #666666;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #666666;
 }
 .left-arrow {
   font-size: 24px;
   line-height: 30px;
+  cursor: pointer;
 }
 .logout-btn-wrapper {
   width: 100%;
