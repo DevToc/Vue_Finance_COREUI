@@ -1,12 +1,23 @@
 <script setup>
+import {ref} from 'vue'
+
 import WButton from "@/components/Button/WButton.vue";
 import SigninBannerIcon1 from "@/components/Icons/SigninBannerIcon1.vue";
 import SigninBannerIcon2 from "@/components/Icons/SigninBannerIcon2.vue";
 import WPhoneNumber from "@/components/Input/WPhoneNumber.vue";
-import { useRouter } from "vue-router";
-const router= useRouter();
-const handleSignin = () => {
-  router.push('onboarding')
+import { useRouter } from 'vue-router';
+
+const router = useRouter()
+let phoneNumber = ref('');
+
+const updatePhoneNumber = (a) => {
+  phoneNumber = a;
+}
+
+const handleSubmit = () => {
+  if(phoneNumber.value!==""){
+    router.push('/account/owner')
+  }
 }
 </script>
 
@@ -26,9 +37,9 @@ const handleSignin = () => {
         <h1>Welcome Back!</h1>
       </div>
       <div class="form-wrapper">
-        <form action="" class="user-info">
-          <WPhoneNumber />
-          <WButton color="primary" text="Sign In" @click="handleSignin" />
+        <form action="" @submit.prevent="handleSubmit" class="user-info">
+          <WPhoneNumber :text="phoneNumber" @onchange="updatePhoneNumber" />
+          <WButton color="primary" text="Sign In" />
         </form>
       </div>
       <div class="signup-wrapper">

@@ -1,6 +1,14 @@
 <script setup>
 import WButton from "@/components/Button/WButton.vue";
 import CreatedIcon from "@/components/Icons/CreatedIcon.vue";
+import { useRouter } from 'vue-router';
+
+const router = useRouter()
+
+const handleContinue = () => {
+  router.push('/signin')
+}
+
 </script>
 
 <template>
@@ -16,7 +24,7 @@ import CreatedIcon from "@/components/Icons/CreatedIcon.vue";
       <CreatedIcon />
     </div>
     <div class="continue-btn-wrapper">
-      <WButton color="primary" text="Verify Now" />
+      <WButton color="primary" text="Continue" @click="handleContinue" />
       <div class="continue-description">
         <p>
           By Clicking continue, you agree to our <br />

@@ -1,8 +1,43 @@
 <script setup>
+import {ref} from 'vue'
 import WInput from "@/components/Input/WInput.vue";
 import WPhoneNumber from "@/components/Input/WPhoneNumber.vue";
 import WButton from "@/components/Button/WButton.vue";
-</script>
+import { useRouter } from 'vue-router';
+
+const router = useRouter()
+let firstName = ref('')
+let lastName = ref('');
+let phoneNumber = ref('');
+let nationalId = ref('');
+let mtype = ref('Renter');
+let agree = ref(false);
+
+const updateFirstName = (a) => {
+  firstName = a;
+}
+
+const updateLastName = (a) => {
+  lastName = a;
+}
+
+const updateNumber = (a) => {
+  phoneNumber = a;
+}
+
+const updateNationalId = (a) => {
+  nationalId = a;
+}
+
+const handleSubmit = () => {
+ if(agree.value===false) {
+  return;
+ }
+ router.push('verifyotp')
+
+ 
+}
+ </script>
 
 <template>
   <div class="signup">
@@ -10,23 +45,23 @@ import WButton from "@/components/Button/WButton.vue";
       <h1>Welcome !</h1>
     </div>
     <div class="form-wrapper">
-      <form action="" class="user-info">
-        <WInput label="First Name" />
-        <WInput label="Last Name" />
-        <WPhoneNumber />
-        <WInput label="National ID" />
+      <form action="" class="user-info" @submit.prevent="handleSubmit">
+        <WInput label="First Name" :text="firstName" @onchange="updateFirstName" />
+        <WInput label="Last Name" :text="lastName" @onchange="updateLastName" />
+        <WPhoneNumber :text="phoneNumber" @onchange = "updateNumber" />
+        <WInput label="National ID" :text="nationalId" @onchange="updateNationalId"  />
         <div class="form-item type">
           <label for="">Type</label>
-          <select name="" id="">
-            <option value="">Renter</option>
-            <option value="">Renter2</option>
+          <select name="" id="" v-model="mtype">
+            <option value="Renter">Renter</option>
+            <option value="Owner">Owner</option>
           </select>
         </div>
         <div class="form-item agree">
-          <input type="checkbox" name="" id="" />
+          <input type="checkbox" name="" id="" v-model="agree" />
           <span>I have agree to our <a href="">Terms and Condition</a></span>
         </div>
-        <WButton color="primary" text="Sign Up" />
+        <WButton color="primary" text="Sign Up"  />
         <div class="signin">
           <span>Already have an account? <a href="signin">Sign In</a></span>
         </div>

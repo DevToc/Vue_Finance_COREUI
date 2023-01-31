@@ -4,8 +4,14 @@ import { CBadge } from "@coreui/vue";
 import OptionIcon from "@/components/Icons/OptionIcon.vue";
 import BellIcon from "@/components/Icons/BellIcon.vue";
 import BalanceIcon from "@/components/Icons/BalanceIcon.vue";
-import CompletedIcon from "@/components/Icons/CompletedIcon.vue";
-import ProcessingIcon from "@/components/Icons/ProcessingIcon.vue";
+import WTransaction from "@/components/Card/WTransaction.vue";
+
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+const handleNotify = () => {
+  router.push('notification')
+}
 </script>
 
 <template>
@@ -19,7 +25,7 @@ import ProcessingIcon from "@/components/Icons/ProcessingIcon.vue";
         <p class="name">Ahmed</p>
       </div>
       <div class="notification">
-        <div color="primary" class="position-relative">
+        <div color="primary" class="notify position-relative pointer" @click="handleNotify">
           <BellIcon />
           <CBadge
             class="border border-light p-1 bell"
@@ -47,66 +53,10 @@ import ProcessingIcon from "@/components/Icons/ProcessingIcon.vue";
     <div class="transactions-wrapper">
       <h3>Latest Transactions</h3>
       <div class="transactions">
-        <div class="transaction-card">
-          <div class="transaction-status position-relative">
-            <CompletedIcon />
-            <div class="status-description">completed</div>
-          </div>
-          <div class="transaction-info">
-            <div class="transaction-detail">
-              <p class="name">Ahmed Mohammed</p>
-              <p class="date">Tuesday, 23 Nov 2022</p>
-            </div>
-            <div class="transaction-amount">
-              <h3>+487 SAR</h3>
-            </div>
-          </div>
-        </div>
-        <div class="transaction-card">
-          <div class="transaction-status position-relative">
-            <CompletedIcon />
-            <div class="status-description">completed</div>
-          </div>
-          <div class="transaction-info">
-            <div class="transaction-detail">
-              <p class="name">Ahmed Mohammed</p>
-              <p class="date">Tuesday, 23 Nov 2022</p>
-            </div>
-            <div class="transaction-amount">
-              <h3>+487 SAR</h3>
-            </div>
-          </div>
-        </div>
-        <div class="transaction-card">
-          <div class="transaction-status position-relative">
-            <ProcessingIcon />
-            <div class="status-description">processing</div>
-          </div>
-          <div class="transaction-info">
-            <div class="transaction-detail">
-              <p class="name">Ahmed Mohammed</p>
-              <p class="date">Tuesday, 23 Nov 2022</p>
-            </div>
-            <div class="transaction-amount processing">
-              <h3>-487 SAR</h3>
-            </div>
-          </div>
-        </div>
-        <div class="transaction-card">
-          <div class="transaction-status position-relative">
-            <ProcessingIcon />
-            <div class="status-description">processing</div>
-          </div>
-          <div class="transaction-info">
-            <div class="transaction-detail">
-              <p class="name">Ahmed Mohammed</p>
-              <p class="date">Tuesday, 23 Nov 2022</p>
-            </div>
-            <div class="transaction-amount processing">
-              <h3>-487 SAR</h3>
-            </div>
-          </div>
-        </div>
+        <WTransaction status="processing" name="KKKKKK" date="Tuesday, 23 Nov 2022" amount="488" />
+        <WTransaction status="completed" name="KKKKKK" date="Tuesday, 23 Nov 2022" amount="488" />
+        <WTransaction status="completed" name="Ahmed Mohammed" date="Tuesday, 23 Nov 2022" amount="488" />
+     
       </div>
     </div>
   </div>
@@ -146,7 +96,9 @@ import ProcessingIcon from "@/components/Icons/ProcessingIcon.vue";
   right: 10px !important;
   left: 18px !important;
 }
-
+.notify {
+  cursor: pointer;
+}
 .balance-card {
   margin-top: 38px;
   width: 100%;

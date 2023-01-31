@@ -1,5 +1,41 @@
 <script setup>
 import WButton from "@/components/Button/WButton.vue";
+import {ref, onMounted} from 'vue'
+import { useRouter } from 'vue-router';
+
+const router = useRouter()
+const first = ref('');
+const second = ref('');
+const third = ref('');
+const final = ref('');
+
+onMounted(() => {
+    first.value.focus()
+})
+
+const handleFirst = () => {
+  second.value.focus();
+}
+
+const handleSecond = () => {
+  third.value.focus();
+}
+
+const handleThird = () => {
+  final.value.focus();
+}
+
+const handleFinal = () => {
+  // second.value.focus();
+}
+
+const handleVerify = () => {
+  console.log(first.value.value)
+  const otp = first.value.value+second.value.value+third.value.value+final.value.value;
+  if(otp.length===4){
+    router.push('account/created')
+  }
+}
 </script>
 
 <template>
@@ -12,10 +48,10 @@ import WButton from "@/components/Button/WButton.vue";
       </p>
     </div>
     <div class="verification-code">
-      <input type="text" maxlength="1" />
-      <input type="text" maxlength="1" />
-      <input type="text" maxlength="1" />
-      <input type="text" maxlength="1" />
+      <input type="text" maxlength="1" ref="first" onkeypress="return event.charCode>=48 && event.charCode<=57" v-on:keyup="handleFirst" />
+      <input type="text" maxlength="1" ref="second" onkeypress="return event.charCode>=48 && event.charCode<=57" v-on:keyup="handleSecond"  />
+      <input type="text" maxlength="1" ref="third" onkeypress="return event.charCode>=48 && event.charCode<=57" v-on:keyup="handleThird"   />
+      <input type="text" maxlength="1" ref="final" onkeypress="return event.charCode>=48 && event.charCode<=57"  v-on:keyup="handleFinal"  />
     </div>
     <div class="resend-code">
       <div class="resend-description">
@@ -26,7 +62,7 @@ import WButton from "@/components/Button/WButton.vue";
       </div>
     </div>
     <div class="verify-btn-wrapper">
-      <WButton text="Verify Now" color="primary" />
+      <WButton text="Verify Now" @click="handleVerify" color="primary" />
     </div>
   </div>
 </template>

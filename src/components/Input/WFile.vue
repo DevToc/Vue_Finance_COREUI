@@ -1,16 +1,21 @@
 <script setup>
-  import { defineProps } from 'vue';
-
+  import { defineProps, ref, defineEmits } from 'vue';
+  
+  let file = ref(null)
+  const emit = defineEmits(['onchange'])
   defineProps({
     label:String
   })
 
+ const update = () => {
+  emit('onchange',file.value.files[0])
+ }
 </script>
 
 <template>
     <div class="input-wrapper">
           <label for="">{{ label }}</label>
-          <input type="file" />
+          <input type="file" @change="update" ref="file" />
         </div>
 </template>
 

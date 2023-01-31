@@ -4,6 +4,7 @@ import { CButton } from "@coreui/vue";
 import AvatarIcon from "@/components/Icons/AvatarIcon.vue";
 import CheckActiveIcon from "@/components/Icons/CheckActiveIcon.vue";
 import CheckIcon from "@/components/Icons/CheckIcon.vue";
+import WContract from "@/components/Card/WContract.vue";
 </script>
 
 <template>
@@ -15,6 +16,7 @@ import CheckIcon from "@/components/Icons/CheckIcon.vue";
       </div>
     </div>
     <div class="contracts-wrapper">
+      <WContract/>
       <div class="contract-card">
         <div class="contract-status">
           <CheckActiveIcon />

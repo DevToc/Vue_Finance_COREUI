@@ -1,17 +1,26 @@
 <script setup>
-import { defineProps } from "vue";
-
 import CreditcardIcon from "../Icons/CreditcardIcon.vue";
+import { defineProps, defineEmits } from "vue";
+
 defineProps({
   label: String,
+  text:String
 });
+
+const emit = defineEmits(['onchange'])
+
+
+
+const update = (e) => {
+  emit('onchange', e.target.value)
+}
 </script>
 
 <template>
   <div class="input-wrapper">
-    <label for="">{{ label }}</label>
+    <label for="">{{ label?label:'Card Number' }}</label>
     <div class="creditcard">
-      <input type="text" />
+      <input type="text" @input="update" />
       <span class="creditcard-icon">
         <CreditcardIcon />
       </span>
@@ -52,7 +61,7 @@ defineProps({
 }
 .creditcard-icon {
   position: absolute;
-  top: 10px;
+  top: 28px;
   right: 10px;
 }
 </style>

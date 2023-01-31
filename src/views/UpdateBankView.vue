@@ -1,20 +1,45 @@
 <script setup>
+import {ref} from 'vue'
 import WButton from "@/components/Button/WButton.vue";
 import WInput from "@/components/Input/WInput.vue";
+import { useRouter } from 'vue-router';
+const router = useRouter()
+
+const handleBack = () => {
+  router.back()
+}
+
+let accountNumber = ref('')
+let IBAN = ref('')
+let bankName = ref('')
+
+const updateAccountNumber = (a) => {
+  accountNumber = a;
+}
+const updateIBAN = (a) => {
+  IBAN = a;
+}
+const updateBankName = (a) => {
+  bankName = a;
+}
+
+const handleUpdate = () => {
+  alert('update');
+}
 </script>
 
 <template>
   <div class="bank">
     <div class="bank-title">
-      <div class="back-icon">&lt;</div>
+      <div class="back-icon" @click="handleBack">&lt;</div>
       <h2>Change Banking Details</h2>
     </div>
     <div class="form-wrapper">
-      <form action="" class="user-info">
-        <WInput label="Account Number" />
-        <WInput label="IBAN" />
+      <form action="" @submit.prevent="handleUpdate" class="user-info">
+        <WInput label="Account Number" :text="accountNumber" @onchange="updateAccountNumber" />
+        <WInput label="IBAN" :text="IBAN" @onchange="updateIBAN" />
 
-        <WInput label="Bank Name" />
+        <WInput label="Bank Name" :text="bankName" @onchange="updateBankName" />
         <div class="btn-wrapper">
           <WButton text="Update" color="primary" />
         </div>

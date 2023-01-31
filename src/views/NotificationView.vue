@@ -3,8 +3,7 @@ import { ref } from "vue";
 import { CNav, CNavItem, CNavLink, CTabContent, CTabPane } from "@coreui/vue";
 
 import OptionIcon from "@/components/Icons/OptionIcon.vue";
-import RequestIcon from "@/components/Icons/RequestIcon.vue";
-import SendIcon from "@/components/Icons/SendIcon.vue";
+import WNotification from "@/components/Notification/WNotification.vue";
 
 const tabPaneActiveKey = ref(1);
 </script>
@@ -54,126 +53,9 @@ const tabPaneActiveKey = ref(1);
           :visible="tabPaneActiveKey === 1"
         >
           <div class="notification-container">
-            <div class="notification-item">
-              <div class="notification-info">
-                <div class="notification-image">
-                  <RequestIcon />
-                </div>
-                <div class="notification-info-detail">
-                  <p class="description">You have received money from Dadi</p>
-                  <p class="amount">Taison +$32.00</p>
-                  <p class="date">11:00 AM</p>
-                </div>
-              </div>
-            </div>
-            <div class="notification-item">
-              <div class="notification-info">
-                <div class="notification-image">
-                  <SendIcon />
-                </div>
-                <div class="notification-info-detail">
-                  <p class="description">You have received money from Dadi</p>
-                  <p class="amount">Taison +$32.00</p>
-                  <p class="date">11:00 AM</p>
-                </div>
-              </div>
-            </div>
-            <div class="notification-item">
-              <div class="notification-info">
-                <div class="notification-image">
-                  <RequestIcon />
-                </div>
-                <div class="notification-info-detail">
-                  <p class="description">You have received money from Dadi</p>
-                  <p class="amount">Taison +$32.00</p>
-                  <p class="date">11:00 AM</p>
-                </div>
-              </div>
-            </div>
-            <div class="notification-item">
-              <div class="notification-info">
-                <div class="notification-image">
-                  <SendIcon />
-                </div>
-                <div class="notification-info-detail">
-                  <p class="description">You have received money from Dadi</p>
-                  <p class="amount">Taison +$32.00</p>
-                  <p class="date">11:00 AM</p>
-                </div>
-              </div>
-            </div>
-            <div class="notification-item">
-              <div class="notification-info">
-                <div class="notification-image">
-                  <RequestIcon />
-                </div>
-                <div class="notification-info-detail">
-                  <p class="description">You have received money from Dadi</p>
-                  <p class="amount">Taison +$32.00</p>
-                  <p class="date">11:00 AM</p>
-                </div>
-              </div>
-            </div>
-            <div class="notification-item">
-              <div class="notification-info">
-                <div class="notification-image">
-                  <SendIcon />
-                </div>
-                <div class="notification-info-detail">
-                  <p class="description">You have received money from Dadi</p>
-                  <p class="amount">Taison +$32.00</p>
-                  <p class="date">11:00 AM</p>
-                </div>
-              </div>
-            </div>
-            <div class="notification-item">
-              <div class="notification-info">
-                <div class="notification-image">
-                  <RequestIcon />
-                </div>
-                <div class="notification-info-detail">
-                  <p class="description">You have received money from Dadi</p>
-                  <p class="amount">Taison +$32.00</p>
-                  <p class="date">11:00 AM</p>
-                </div>
-              </div>
-            </div>
-            <div class="notification-item">
-              <div class="notification-info">
-                <div class="notification-image">
-                  <SendIcon />
-                </div>
-                <div class="notification-info-detail">
-                  <p class="description">You have received money from Dadi</p>
-                  <p class="amount">Taison +$32.00</p>
-                  <p class="date">11:00 AM</p>
-                </div>
-              </div>
-            </div>
-            <div class="notification-item">
-              <div class="notification-info">
-                <div class="notification-image">
-                  <RequestIcon />
-                </div>
-                <div class="notification-info-detail">
-                  <p class="description">You have received money from Dadi</p>
-                  <p class="amount">Taison +$32.00</p>
-                  <p class="date">11:00 AM</p>
-                </div>
-              </div>
-            </div>
-            <div class="notification-item">
-              <div class="notification-info">
-                <div class="notification-image">
-                  <SendIcon />
-                </div>
-                <div class="notification-info-detail">
-                  <p class="description">You have received money from Dadi</p>
-                  <p class="amount">Taison +$32.00</p>
-                  <p class="date">11:00 AM</p>
-                </div>
-              </div>
-            </div>
+            <WNotification name="Dadi Taison" amount="32.00" tran-type="send" date="11:00 AM" />
+            <WNotification name="Dadi Taison" amount="32.00" tran-type="receive" date="11:00 AM" />
+       
           </div>
         </CTabPane>
         <CTabPane
@@ -182,30 +64,8 @@ const tabPaneActiveKey = ref(1);
           :visible="tabPaneActiveKey === 2"
         >
           <div class="notification-container">
-            <div class="notification-item">
-              <div class="notification-info">
-                <div class="notification-image">
-                  <RequestIcon />
-                </div>
-                <div class="notification-info-detail">
-                  <p class="description">You have received money from Dadi</p>
-                  <p class="amount">Taison +$32.00</p>
-                  <p class="date">11:00 AM</p>
-                </div>
-              </div>
-            </div>
-            <div class="notification-item">
-              <div class="notification-info">
-                <div class="notification-image">
-                  <SendIcon />
-                </div>
-                <div class="notification-info-detail">
-                  <p class="description">You have received money from Dadi</p>
-                  <p class="amount">Taison +$32.00</p>
-                  <p class="date">11:00 AM</p>
-                </div>
-              </div>
-            </div>
+            <WNotification name="Dadi Taison" amount="32.00" tran-type="send" date="11:00 AM" />
+            <WNotification name="Dadi Taison" amount="32.00" tran-type="receive" date="11:00 AM" />
           </div>
         </CTabPane>
       </CTabContent>

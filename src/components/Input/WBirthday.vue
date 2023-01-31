@@ -1,10 +1,11 @@
 <script setup>
-import { ref, defineProps } from "vue";
+import { ref, defineProps, defineEmits } from "vue";
 
 defineProps({
     label:String,
 })
 
+const emit = defineEmits(['onchange'])
 let mdate = ref("");
 const weekdays = [
   "Monday",
@@ -20,6 +21,7 @@ const datechange = (e) => {
   let date = new Date(e.target.value);
   mdate.value =
     date.getDate() + " " + weekdays[date.getDay()] + " " + date.getFullYear();
+    emit('onchange', date);
 };
 </script>
 

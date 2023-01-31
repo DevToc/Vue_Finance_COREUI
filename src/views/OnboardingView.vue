@@ -31,7 +31,7 @@ const handleLogin= () => {
   </div>
 </template>
 
-<style lang="scss">
+<style scoped>
 .onboarding {
   height: 100vh;
   display: flex;

@@ -1,12 +1,23 @@
 <script setup>
+import { defineEmits} from 'vue'
 import MazPhoneNumberInput from "maz-ui/components/MazPhoneNumberInput";
 import "maz-ui/css/main.css";
+
+
+const emit = defineEmits(['onchange'])
+
+const update = (e) => {
+  if(e.isValid) {
+    emit('onchange',e.countryCallingCode+e.nationalNumber)
+  }
+} 
+
 </script>
 <template>
   <div class="phone-number-input-container">
     <label for="">Phone Number</label>
     <MazPhoneNumberInput
-      color="info"
+       color="info"
       :translations="{
         countrySelector: {
           placeholder: 'country code',
@@ -17,6 +28,8 @@ import "maz-ui/css/main.css";
           example: '',
         },
       }"
+      @update = "update"
+
     />
   </div>
 </template>
