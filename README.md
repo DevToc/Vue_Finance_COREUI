@@ -25,14 +25,3 @@ npm run lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-
-###my skype is ZToc
-
-
-
-
-
-
-
-
-### My skype is ZToc
