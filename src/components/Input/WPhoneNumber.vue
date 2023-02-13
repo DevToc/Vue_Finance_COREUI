@@ -3,7 +3,6 @@ import { defineEmits} from 'vue'
 import MazPhoneNumberInput from "maz-ui/components/MazPhoneNumberInput";
 import "maz-ui/css/main.css";
 
-
 const emit = defineEmits(['onchange'])
 
 const update = (e) => {
@@ -29,7 +28,6 @@ const update = (e) => {
         },
       }"
       @update = "update"
-
     />
   </div>
 </template>

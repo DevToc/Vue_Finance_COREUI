@@ -7,11 +7,9 @@ defineProps({
   tranType:String,
   amount:String,
   date:String
-
 })
 
 </script>
-
 
 <template>
   <div class="notification-item">
@@ -32,6 +30,7 @@ defineProps({
     </div>
   </div>
 </template>
+
 <style scoped>
 .notification-item {
   width: 100%;
@@ -74,7 +73,6 @@ defineProps({
   line-height: 22px;
   color: #100d40;
 }
-
 .date {
   font-weight: 400;
   font-size: 12px;

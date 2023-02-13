@@ -1,27 +1,24 @@
 <script setup>
+import { useRouter } from "vue-router";
 import UserIcon from "@/components/Icons/UserIcon.vue";
 import MailIcon from "@/components/Icons/MailIcon.vue";
 import WButton from "@/components/Button/WButton.vue";
-import { useRouter } from 'vue-router';
-const router = useRouter()
+const router = useRouter();
 
-const handleProfile =()=>{
-  router.push('/account/profile');
+const handleProfile = () => {
+  router.push("/account/profile");
+};
+const handleBank = () => {
+  router.push("/account/bank");
+};
 
-}
-const handleBank=()=>{
-  router.push('/account/bank');
-
-}
-
-const handleLanguage=()=>{
-  alert("Language")
-
-}
+const handleLanguage = () => {
+  alert("Language");
+};
 
 const handleLogout = () => {
-  alert('logout')
-}
+  alert("logout");
+};
 </script>
 
 <template>

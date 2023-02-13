@@ -1,42 +1,35 @@
 <script setup>
-import {ref} from 'vue'
+import { ref } from "vue";
+import { useRouter } from "vue-router";
 import WInput from "@/components/Input/WInput.vue";
 import WBirthday from "@/components/Input/WBirthday.vue";
 import WButton from "@/components/Button/WButton.vue";
-import { useRouter } from 'vue-router';
-const router = useRouter()
 
+const router = useRouter();
 const handleBack = () => {
-  router.back()
-}
-let firstName = ref('')
-let lastName = ref('');
-let nationalId = ref('');
-let birthday = ref('');
+  router.back();
+};
+let firstName = ref("");
+let lastName = ref("");
+let nationalId = ref("");
+let birthday = ref("");
 
 const updateFirstName = (a) => {
   firstName = a;
-}
-
+};
 const updateLastName = (a) => {
   lastName = a;
-}
-
-
+};
 const updateNationalId = (a) => {
   nationalId = a;
-}
-
+};
 const updateBirthday = (a) => {
   birthday = a;
   console.log(a);
-}
-
+};
 const handleSubmit = () => {
-
-    console.log("submit")
-}
-
+  console.log("submit");
+};
 </script>
 
 <template>
@@ -47,10 +40,18 @@ const handleSubmit = () => {
     </div>
     <div class="form-wrapper">
       <form action="" class="user-info" @submit.prevent="handleSubmit">
-        <WInput label="First Name" :text="firstName" @onchange="updateFirstName" />
+        <WInput
+          label="First Name"
+          :text="firstName"
+          @onchange="updateFirstName"
+        />
         <WInput label="Last Name" :text="lastName" @onchange="updateLastName" />
-        <WInput label="National ID" :text="nationalId" @onchange="updateNationalId" />
-        <WBirthday :text="birthday" @onchange = "updateBirthday"></WBirthday>
+        <WInput
+          label="National ID"
+          :text="nationalId"
+          @onchange="updateNationalId"
+        />
+        <WBirthday :text="birthday" @onchange="updateBirthday"></WBirthday>
         <div class="btn-wrapper">
           <WButton text="Update" color="primary" />
         </div>

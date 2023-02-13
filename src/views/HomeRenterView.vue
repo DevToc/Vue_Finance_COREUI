@@ -1,13 +1,11 @@
 <script setup>
 import { ref } from "vue";
 import { CNav, CNavItem, CNavLink, CTabContent, CTabPane } from "@coreui/vue";
-
 import CircleProgress from "vue3-circle-progress";
 import OptionIcon from "@/components/Icons/OptionIcon.vue";
 import HomeIcon from "@/components/Icons/HomeIcon.vue";
 import HomeRenterBannerIcon from "@/components/Icons/HomeRenterBannerIcon.vue";
 import WButton from "@/components/Button/WButton.vue";
-
 import "vue3-circle-progress/dist/circle-progress.css";
 
 const tabPaneActiveKey = ref(1);

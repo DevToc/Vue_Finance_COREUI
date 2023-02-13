@@ -1,5 +1,5 @@
 <template>
-  <div class="handicon">
+  <div class="icon-hand">
     <svg
       width="244"
       height="220"

@@ -1,15 +1,15 @@
 <script setup>
+import { useRouter } from "vue-router";
 import HandIcon from "@/components/Icons/HandIcon.vue";
 import WButton from "@/components/Button/WButton.vue";
-import { useRouter } from "vue-router";
-const router = useRouter();
 
+const router = useRouter();
 const handleCreate = () => {
-  router.push('signup')
-}
-const handleLogin= () => {
-  router.push('signin')
-}
+  router.push("signup");
+};
+const handleLogin = () => {
+  router.push("signin");
+};
 </script>
 
 <template>

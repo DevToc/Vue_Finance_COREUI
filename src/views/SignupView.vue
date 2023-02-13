@@ -1,43 +1,37 @@
 <script setup>
-import {ref} from 'vue'
+import { ref } from "vue";
+import { useRouter } from "vue-router";
 import WInput from "@/components/Input/WInput.vue";
 import WPhoneNumber from "@/components/Input/WPhoneNumber.vue";
 import WButton from "@/components/Button/WButton.vue";
-import { useRouter } from 'vue-router';
 
-const router = useRouter()
-let firstName = ref('')
-let lastName = ref('');
-let phoneNumber = ref('');
-let nationalId = ref('');
-let mtype = ref('Renter');
+const router = useRouter();
+let firstName = ref("");
+let lastName = ref("");
+let phoneNumber = ref("");
+let nationalId = ref("");
+let mtype = ref("Renter");
 let agree = ref(false);
 
 const updateFirstName = (a) => {
   firstName = a;
-}
-
+};
 const updateLastName = (a) => {
   lastName = a;
-}
-
+};
 const updateNumber = (a) => {
   phoneNumber = a;
-}
-
+};
 const updateNationalId = (a) => {
   nationalId = a;
-}
-
+};
 const handleSubmit = () => {
- if(agree.value===false) {
-  return;
- }
- router.push('verifyotp')
-
- 
-}
- </script>
+  if (agree.value === false) {
+    return;
+  }
+  router.push("verifyotp");
+};
+</script>
 
 <template>
   <div class="signup">
@@ -46,10 +40,18 @@ const handleSubmit = () => {
     </div>
     <div class="form-wrapper">
       <form action="" class="user-info" @submit.prevent="handleSubmit">
-        <WInput label="First Name" :text="firstName" @onchange="updateFirstName" />
+        <WInput
+          label="First Name"
+          :text="firstName"
+          @onchange="updateFirstName"
+        />
         <WInput label="Last Name" :text="lastName" @onchange="updateLastName" />
-        <WPhoneNumber :text="phoneNumber" @onchange = "updateNumber" />
-        <WInput label="National ID" :text="nationalId" @onchange="updateNationalId"  />
+        <WPhoneNumber :text="phoneNumber" @onchange="updateNumber" />
+        <WInput
+          label="National ID"
+          :text="nationalId"
+          @onchange="updateNationalId"
+        />
         <div class="form-item type">
           <label for="">Type</label>
           <select name="" id="" v-model="mtype">
@@ -61,7 +63,7 @@ const handleSubmit = () => {
           <input type="checkbox" name="" id="" v-model="agree" />
           <span>I have agree to our <a href="">Terms and Condition</a></span>
         </div>
-        <WButton color="primary" text="Sign Up"  />
+        <WButton color="primary" text="Sign Up" />
         <div class="signin">
           <span>Already have an account? <a href="signin">Sign In</a></span>
         </div>

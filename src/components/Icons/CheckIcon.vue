@@ -1,5 +1,5 @@
 <template>
-  <div class="handicon">
+  <div class="icon-check">
     <svg
       width="25"
       height="25"

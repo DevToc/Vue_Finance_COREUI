@@ -1,14 +1,13 @@
 <script setup>
+import { useRouter } from 'vue-router';
 import WButton from "@/components/Button/WButton.vue";
 import CreatedIcon from "@/components/Icons/CreatedIcon.vue";
-import { useRouter } from 'vue-router';
 
 const router = useRouter()
 
 const handleContinue = () => {
   router.push('/signin')
 }
-
 </script>
 
 <template>

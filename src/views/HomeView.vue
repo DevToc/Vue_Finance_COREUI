@@ -1,17 +1,15 @@
 <script setup>
+import { useRouter } from "vue-router";
 import { CBadge } from "@coreui/vue";
-
 import OptionIcon from "@/components/Icons/OptionIcon.vue";
 import BellIcon from "@/components/Icons/BellIcon.vue";
 import BalanceIcon from "@/components/Icons/BalanceIcon.vue";
 import WTransaction from "@/components/Card/WTransaction.vue";
 
-import { useRouter } from "vue-router";
-
 const router = useRouter();
 const handleNotify = () => {
-  router.push('notification')
-}
+  router.push("notification");
+};
 </script>
 
 <template>
@@ -25,7 +23,11 @@ const handleNotify = () => {
         <p class="name">Ahmed</p>
       </div>
       <div class="notification">
-        <div color="primary" class="notify position-relative pointer" @click="handleNotify">
+        <div
+          color="primary"
+          class="notify position-relative pointer"
+          @click="handleNotify"
+        >
           <BellIcon />
           <CBadge
             class="border border-light p-1 bell"
@@ -53,10 +55,24 @@ const handleNotify = () => {
     <div class="transactions-wrapper">
       <h3>Latest Transactions</h3>
       <div class="transactions">
-        <WTransaction status="processing" name="KKKKKK" date="Tuesday, 23 Nov 2022" amount="488" />
-        <WTransaction status="completed" name="KKKKKK" date="Tuesday, 23 Nov 2022" amount="488" />
-        <WTransaction status="completed" name="Ahmed Mohammed" date="Tuesday, 23 Nov 2022" amount="488" />
-     
+        <WTransaction
+          status="processing"
+          name="KKKKKK"
+          date="Tuesday, 23 Nov 2022"
+          amount="488"
+        />
+        <WTransaction
+          status="completed"
+          name="KKKKKK"
+          date="Tuesday, 23 Nov 2022"
+          amount="488"
+        />
+        <WTransaction
+          status="completed"
+          name="Ahmed Mohammed"
+          date="Tuesday, 23 Nov 2022"
+          amount="488"
+        />
       </div>
     </div>
   </div>

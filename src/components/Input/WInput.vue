@@ -8,8 +8,6 @@ defineProps({
 
 const emit = defineEmits(['onchange'])
 
-
-
 const update = (e) => {
   emit('onchange', e.target.value)
 }

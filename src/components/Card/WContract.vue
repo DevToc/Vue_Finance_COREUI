@@ -1,6 +1,6 @@
 <script setup>
-  import CheckActiveIcon from '../Icons/CheckActiveIcon.vue';
   import { CButton } from '@coreui/vue';
+  import CheckActiveIcon from '../Icons/CheckActiveIcon.vue';
   import AvatarIcon from '../Icons/AvatarIcon.vue';
 </script>
 

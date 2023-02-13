@@ -1,13 +1,11 @@
 <script setup>
-  import { useRouter } from 'vue-router';
-  
-  import SplashIcon from '@/components/Icons/SplashIcon.vue';
-  const router = useRouter();
-  setTimeout(() => {
-      router.push({name:'onboarding'})
-  }, 3000);
+import { useRouter } from "vue-router";
+import SplashIcon from "@/components/Icons/SplashIcon.vue";
 
-
+const router = useRouter();
+setTimeout(() => {
+  router.push({ name: "onboarding" });
+}, 3000);
 </script>
 
 <template>
@@ -18,10 +16,9 @@
 </template>
 
 <style>
-
 .splash {
   height: 100vh;
-  background-color: #100D40;
+  background-color: #100d40;
   display: flex;
   justify-content: center;
   align-items: center;

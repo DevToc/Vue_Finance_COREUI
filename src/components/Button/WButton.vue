@@ -5,7 +5,6 @@ defineProps({
   text: String,
   color: String,
 });
-
 const bgColors = ref({
   primary: "#100D40",
   white: "#ffffff",

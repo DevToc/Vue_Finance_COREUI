@@ -1,6 +1,6 @@
 <script setup>
-import CreditcardIcon from "../Icons/CreditcardIcon.vue";
 import { defineProps, defineEmits } from "vue";
+import CreditcardIcon from "../Icons/CreditcardIcon.vue";
 
 defineProps({
   label: String,
@@ -8,8 +8,6 @@ defineProps({
 });
 
 const emit = defineEmits(['onchange'])
-
-
 
 const update = (e) => {
   emit('onchange', e.target.value)

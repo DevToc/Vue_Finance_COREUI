@@ -1,6 +1,5 @@
 <script setup>
 import { ref } from "vue";
-
 import WInput from "@/components/Input/WInput.vue";
 import WBirthday from "@/components/Input/WBirthday.vue";
 import WButton from "@/components/Button/WButton.vue";
@@ -19,85 +18,70 @@ const index = ref(0);
 const amount = ref(0);
 
 //////////////////////////////////////
-let firstName = ref('')
-let lastName = ref('');
-let nationalId = ref('');
-let birthday = ref('');
+let firstName = ref("");
+let lastName = ref("");
+let nationalId = ref("");
+let birthday = ref("");
 const updateFirstName = (a) => {
   firstName = a;
-}
-
+};
 const updateLastName = (a) => {
   lastName = a;
-}
-
+};
 const updateNationalId = (a) => {
   nationalId = a;
-}
-
+};
 const updateBirthday = (a) => {
   birthday = a;
   console.log(a);
-}
+};
 //////////////////////////////
-
-let startDate = ref('')
-
+let startDate = ref("");
 const updateStartDate = (a) => {
-  startDate = a ;
-  console.log(a)
-}
-
+  startDate = a;
+  console.log(a);
+};
 //////////////////////////
-
-let salaryAmount = ref('');
-let commitAmount = ref('');
-let sama = ref('')
-let bankStatement = ref('')
-let socialSecurity = ref('');
-
+let salaryAmount = ref("");
+let commitAmount = ref("");
+let sama = ref("");
+let bankStatement = ref("");
+let socialSecurity = ref("");
 const updateSalaryAmount = (a) => {
   salaryAmount = a;
-}
+};
 const updateCommitAmount = (a) => {
   commitAmount = a;
-}
+};
 const updateSama = (a) => {
-  console.log(a)
+  console.log(a);
   sama = a;
-}
+};
 const updateBankStatement = (a) => {
   bankStatement = a;
-}
+};
 const updateSocialSecurity = (a) => {
   socialSecurity = a;
-}
+};
 /////////////////////////////////
-let cardNumber = ref('');
-let expiredDate= ref('');
-let CVC = ref('')
-let cardName = ref('');
-
-const updateCardNumber  = (a) => {
-  cardNumber  = a; 
-}
-const updateExpiredDate  = (a) => {
-  expiredDate  = a; 
-}
-const updateCVC  = (a) => {
-  CVC  = a; 
-}
-const updateCardName  = (a) => {
-  cardName  = a; 
-}
-
-const handleFinish = () => {
-
-}
-
+let cardNumber = ref("");
+let expiredDate = ref("");
+let CVC = ref("");
+let cardName = ref("");
+const updateCardNumber = (a) => {
+  cardNumber = a;
+};
+const updateExpiredDate = (a) => {
+  expiredDate = a;
+};
+const updateCVC = (a) => {
+  CVC = a;
+};
+const updateCardName = (a) => {
+  cardName = a;
+};
+const handleFinish = () => {};
 /////////////////////////////////
-
-
 </script>
 
 <template>
@@ -113,9 +97,21 @@ const handleFinish = () => {
       <div class="info-personal" v-if="index === 0">
         <div class="form-wrapper">
           <form action="" class="user-info">
-            <WInput label="First Name" :text="firstName" @onchange="updateFirstName"></WInput>
-            <WInput label="Last Name" :text="lastName" @onchange="updateLastName"></WInput>
-            <WInput label="National ID" :text="nationalId" @onchange="updateNationalId"></WInput>
+            <WInput
+              label="First Name"
+              :text="firstName"
+              @onchange="updateFirstName"
+            ></WInput>
+            <WInput
+              label="Last Name"
+              :text="lastName"
+              @onchange="updateLastName"
+            ></WInput>
+            <WInput
+              label="National ID"
+              :text="nationalId"
+              @onchange="updateNationalId"
+            ></WInput>
             <WBirthday :text="birthday" @onchange="updateBirthday" />
             <div class="form-item btn-wrapper">
               <WButton
@@ -161,7 +157,11 @@ const handleFinish = () => {
           </div>
         </div>
         <div class="loan-date">
-          <WBirthday label="Start date" :text="startDate" @onchange="updateStartDate" />
+          <WBirthday
+            label="Start date"
+            :text="startDate"
+            @onchange="updateStartDate"
+          />
           <WRange />
         </div>
         <div class="loan-button">
@@ -179,11 +179,31 @@ const handleFinish = () => {
       <div class="info-financial" v-if="index === 2">
         <div class="form-wrapper">
           <form action="" class="user-info">
-            <WInput label="Salary Amount" :text="salaryAmount" @onchange="updateSalaryAmount"></WInput>
-            <WInput label="Commitments Amount" :text="commitAmount" @onchange="updateCommitAmount"></WInput>
-            <WFile label="Copy of Sama" :text="sama" @change="updateSama"></WFile>
-            <WFile label="Bank Statement Last 6 months" :text="bankStatement" @onchange="updateBankStatement"></WFile>
-            <WFile label="Copy of Social Security" :text="socialSecurity" @onchange="updateSocialSecurity" ></WFile>
+            <WInput
+              label="Salary Amount"
+              :text="salaryAmount"
+              @onchange="updateSalaryAmount"
+            ></WInput>
+            <WInput
+              label="Commitments Amount"
+              :text="commitAmount"
+              @onchange="updateCommitAmount"
+            ></WInput>
+            <WFile
+              label="Copy of Sama"
+              :text="sama"
+              @change="updateSama"
+            ></WFile>
+            <WFile
+              label="Bank Statement Last 6 months"
+              :text="bankStatement"
+              @onchange="updateBankStatement"
+            ></WFile>
+            <WFile
+              label="Copy of Social Security"
+              :text="socialSecurity"
+              @onchange="updateSocialSecurity"
+            ></WFile>
           </form>
         </div>
         <div class="financial-btn">
@@ -200,13 +220,21 @@ const handleFinish = () => {
       </div>
       <div class="info-creditcard" v-if="index === 3">
         <div class="form-wrapper">
-          <form action="" @submit.prevent = 'handleFinish'>
-            <WInputWIthIcon  :text="cardNumber" @onchange="updateCardNumber"  />
+          <form action="" @submit.prevent="handleFinish">
+            <WInputWIthIcon :text="cardNumber" @onchange="updateCardNumber" />
             <div class="form-item-wrapper">
-              <WInput label="Expired Date" :text="expiredDate" @onchange="updateExpiredDate" />
+              <WInput
+                label="Expired Date"
+                :text="expiredDate"
+                @onchange="updateExpiredDate"
+              />
               <WInput label="CVC/CVV" :text="CVC" @onchange="updateCVC" />
             </div>
-            <WInput label="Cardholder Name" @onchange="updateCardName" :text="cardName" />
+            <WInput
+              label="Cardholder Name"
+              @onchange="updateCardName"
+              :text="cardName"
+            />
             <WButton color="primary" text="Finish" class="btn-finish">
             </WButton>
           </form>

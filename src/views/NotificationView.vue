@@ -1,7 +1,6 @@
 <script setup>
 import { ref } from "vue";
 import { CNav, CNavItem, CNavLink, CTabContent, CTabPane } from "@coreui/vue";
-
 import OptionIcon from "@/components/Icons/OptionIcon.vue";
 import WNotification from "@/components/Notification/WNotification.vue";
 
@@ -53,9 +52,18 @@ const tabPaneActiveKey = ref(1);
           :visible="tabPaneActiveKey === 1"
         >
           <div class="notification-container">
-            <WNotification name="Dadi Taison" amount="32.00" tran-type="send" date="11:00 AM" />
-            <WNotification name="Dadi Taison" amount="32.00" tran-type="receive" date="11:00 AM" />
-       
+            <WNotification
+              name="Dadi Taison"
+              amount="32.00"
+              tran-type="send"
+              date="11:00 AM"
+            />
+            <WNotification
+              name="Dadi Taison"
+              amount="32.00"
+              tran-type="receive"
+              date="11:00 AM"
+            />
           </div>
         </CTabPane>
         <CTabPane
@@ -64,8 +72,18 @@ const tabPaneActiveKey = ref(1);
           :visible="tabPaneActiveKey === 2"
         >
           <div class="notification-container">
-            <WNotification name="Dadi Taison" amount="32.00" tran-type="send" date="11:00 AM" />
-            <WNotification name="Dadi Taison" amount="32.00" tran-type="receive" date="11:00 AM" />
+            <WNotification
+              name="Dadi Taison"
+              amount="32.00"
+              tran-type="send"
+              date="11:00 AM"
+            />
+            <WNotification
+              name="Dadi Taison"
+              amount="32.00"
+              tran-type="receive"
+              date="11:00 AM"
+            />
           </div>
         </CTabPane>
       </CTabContent>
